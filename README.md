@@ -8,7 +8,7 @@ MEE project showcasing fusion supertransactions with AAVE protocol.
 
    ```bash
    npm run setup
-   # Edit .env file with your Infura API key
+   # Edit .env file with your Infura API key and Biconomy key
    ```
 
 2. **Setup MEE Node**:
@@ -35,7 +35,13 @@ MEE project showcasing fusion supertransactions with AAVE protocol.
    npm run fund:account
    ```
 
-6. **Verify Setup**:
+6. **Initialize AbstractJS SDK**:
+
+   ```bash
+   npm run init:abstractjs
+   ```
+
+7. **Verify Setup**:
    ```bash
    npm run check:balance
    ```

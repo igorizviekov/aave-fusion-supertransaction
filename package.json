@@ -9,21 +9,24 @@
 		"start:anvil": "bash ./scripts/start-anvil.sh",
 		"start:mee": "cd mee-node-deployment && docker compose --env-file ../.env up -d",
 		"stop:mee": "cd mee-node-deployment && docker compose down",
-		"fund:account": "node scripts/fund-account.js",
-		"check:balance": "node scripts/check-balance.js",
+		"fund:account": "tsx scripts/fund-account.ts",
+		"check:balance": "tsx scripts/check-balance.ts",
+		"init:abstractjs": "tsx scripts/init-abstractjs.ts",
 		"clean": "rm -rf dist node_modules .env"
 	},
 	"author": "igorizviekov",
 	"license": "MIT",
 	"dependencies": {
-		"ethers": "^6.8.1",
+		"@biconomy/abstractjs": "^1.1.9",
+		"axios": "^1.6.2",
 		"dotenv": "^16.3.1",
-		"axios": "^1.6.2"
+		"ethers": "^6.8.1",
+		"viem": "^2.37.12"
 	},
 	"devDependencies": {
 		"@types/node": "^20.10.0",
-		"typescript": "^5.3.2",
-		"tsx": "^4.6.0"
+		"tsx": "^4.6.0",
+		"typescript": "^5.3.2"
 	},
 	"engines": {
 		"node": ">=18.0.0"
