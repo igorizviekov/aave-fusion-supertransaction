@@ -75,3 +75,11 @@ cache/
 broadcast/
 
 mee-node-data/
+
+mee-node-deployment/chains-local/
+mee-node-deployment/logs/
+mee-node-deployment/keystore/
+mee-node-deployment/redis-data/
+mee-node-deployment/*.backup
+mee-node-deployment/*.bak
+mee-node-deployment/.env

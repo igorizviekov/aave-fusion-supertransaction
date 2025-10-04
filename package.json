@@ -5,7 +5,10 @@
 	"main": "index.js",
 	"scripts": {
 		"setup": "npm install && cp env.example .env",
+		"setup:mee": "bash ./scripts/setup-mee-node.sh",
 		"start:anvil": "bash ./scripts/start-anvil.sh",
+		"start:mee": "cd mee-node-deployment && docker compose --env-file ../.env up -d",
+		"stop:mee": "cd mee-node-deployment && docker compose down",
 		"fund:account": "node scripts/fund-account.js",
 		"check:balance": "node scripts/check-balance.js",
 		"clean": "rm -rf dist node_modules .env"

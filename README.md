@@ -11,27 +11,40 @@ MEE project showcasing fusion supertransactions with AAVE protocol.
    # Edit .env file with your Infura API key
    ```
 
-2. **Start Local Blockchain**:
+2. **Setup MEE Node**:
 
    ```bash
-    npm run start:anvil
+   npm run setup:mee
    ```
 
-3. **Fund Test Account**:
+3. **Start Local Blockchain**:
+
+   ```bash
+   npm run start:anvil
+   ```
+
+4. **Start MEE Node**:
+
+   ```bash
+   npm run start:mee
+   ```
+
+5. **Fund Test Account**:
 
    ```bash
    npm run fund:account
    ```
 
-4. **Verify Setup**:
+6. **Verify Setup**:
    ```bash
    npm run check:balance
    ```
 
-## Requirements
+## Prerequisites
 
 - Node.js v18+
 - Foundry (for Anvil, https://foundry.paradigm.xyz)
+- Docker & Docker Compose
 - Infura API key (or alternative RPC provider)
 
 ## License
