@@ -29,21 +29,28 @@ MEE project showcasing fusion supertransactions with AAVE protocol.
    npm run start:mee
    ```
 
-5. **Fund Test Account**:
-
-   ```bash
-   npm run fund:account
-   ```
-
-6. **Initialize AbstractJS SDK**:
+5. **Initialize AbstractJS SDK**:
 
    ```bash
    npm run init:abstractjs
    ```
 
+6. **Fund Test Account**:
+
+   ```bash
+   npm run fund:account
+   ```
+
 7. **Verify Setup**:
+
    ```bash
    npm run check:balance
+   ```
+
+8. **Execute Fusion Supertransaction**:
+
+   ```bash
+   npm run execute:fusion
    ```
 
 ## Prerequisites

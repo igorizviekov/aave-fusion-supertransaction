@@ -25,7 +25,6 @@ export async function getMeeClient(): Promise<MeeClient> {
 	if (!TEST_PRIVATE_KEY || !MEE_NODE_URL || !LOCAL_RPC_URL) {
 		throw new Error('Missing required environment variables');
 	}
-	console.log('Creating MEE client...');
 	const eoa = privateKeyToAccount(TEST_PRIVATE_KEY);
 
 	const orchestrator = await toMultichainNexusAccount({
@@ -45,7 +44,6 @@ export async function getMeeClient(): Promise<MeeClient> {
 		apiKey: process.env.BICONOMY_API_KEY,
 	});
 
-	console.log('MEE client created successfully.');
 	return meeClient;
 }
 
@@ -54,6 +52,12 @@ export function resetMeeClient(): void {
 }
 
 export async function getAccountAddress(): Promise<string> {
+	if (meeClient) {
+		const address = meeClient.account.addressOn(1);
+		if (address) {
+			return address;
+		}
+	}
 	const client = await getMeeClient();
 	const address = client.account.addressOn(1);
 	if (!address) {

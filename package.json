@@ -12,6 +12,7 @@
 		"fund:account": "tsx scripts/fund-account.ts",
 		"check:balance": "tsx scripts/check-balance.ts",
 		"init:abstractjs": "tsx scripts/init-abstractjs.ts",
+		"execute:fusion": "tsx scripts/execute-fusion-supertransaction.ts",
 		"clean": "rm -rf dist node_modules .env"
 	},
 	"author": "igorizviekov",
